@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XVIII Jornada de Programació i Robòtica Educatives</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__brand">
+          <img class="hero__logo" src="logo.png" alt="Logo de la jornada" />
+          <div>
+            <p class="hero__tag">#JPRE26</p>
+            <h1>XVIII Jornada de Programació i Robòtica Educatives</h1>
+            <p class="hero__subtitle">Formulari d’inscripció en línia</p>
+          </div>
+        </div>
+        <div class="hero__panel">
+          <p>
+            Omple les teves dades, escull fins a <strong>2 franges horàries</strong>
+            (1 taller per franja) i confirma la inscripció.
+          </p>
+          <ul class="hero__rules">
+            <li>Només correus acabats en <strong>@xtec.cat</strong>.</li>
+            <li>Un taller per franja. Màxim 2 franges.</li>
+         </ul>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="card">
+          <h2>Dades personals</h2>
+          <form id="registration-form" novalidate>
+            <div class="form-grid">
+              <label>
+                Nom i cognoms
+                <input type="text" name="nom" required />
+              </label>
+              <label>
+                Centre educatiu
+                <input type="text" name="centre" required />
+              </label>
+              <label>
+                Localitat
+                <input type="text" name="localitat" required />
+              </label>
+              <label>
+                Correu @xtec.cat
+                <input type="email" name="email" placeholder="nom@xtec.cat" required />
+              </label>
+            </div>
+
+            <div class="workshops">
+              <div class="workshops__header">
+                <h2>Selecció de tallers</h2>
+                <p>Selecciona un taller per franja. Pots escollir fins a dues franges.</p>
+              </div>
+              <div id="workshop-container" class="workshops__grid"></div>
+            </div>
+
+            <div class="actions">
+              <button id="confirm-button" type="submit" disabled>Confirmar inscripció</button>
+              <p id="form-message" class="form-message" role="status"></p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

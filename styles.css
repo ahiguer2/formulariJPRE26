@@ -1,0 +1,250 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+:root {
+  --teal: #6a9fb3;
+  --teal-dark: #2f5562;
+  --coral: #d56b4c;
+  --rose: #efd6d4;
+  --ink: #1f2b32;
+  --sky: #b5dceb;
+  --cream: #f7f1ef;
+  --card: #ffffff;
+  --success: #2e9b53;
+  --warning: #d0882f;
+  --danger: #c23b2a;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", "Segoe UI", "Calibri", "Arial", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--sky), var(--rose));
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.hero {
+  display: grid;
+  gap: 24px;
+  background: var(--card);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 22px 50px rgba(31, 43, 50, 0.18);
+}
+
+.hero__brand {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero__logo {
+  width: 140px;
+  height: auto;
+  border-radius: 16px;
+  border: 6px solid var(--coral);
+  background: var(--rose);
+}
+
+.hero__tag {
+  margin: 0;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 6px 0 6px;
+  font-size: clamp(1.8rem, 2vw + 1.2rem, 2.6rem);
+}
+
+.hero__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--teal-dark);
+}
+
+.hero__panel {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 18px;
+  border-left: 8px solid var(--coral);
+}
+
+.hero__rules {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.content {
+  margin-top: 28px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(31, 43, 50, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ccd3d8;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--teal);
+  border-color: transparent;
+}
+
+.workshops {
+  margin-top: 28px;
+}
+
+.workshops__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.workshops__grid {
+  margin-top: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.franja {
+  border-radius: 20px;
+  padding: 18px;
+  background: var(--cream);
+}
+
+.franja__title {
+  margin-top: 0;
+  color: var(--teal-dark);
+}
+
+.taller-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.taller-card {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 14px;
+  background: var(--card);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: grid;
+  gap: 10px;
+}
+
+.taller-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(31, 43, 50, 0.12);
+}
+
+.taller-card.selected {
+  border-color: var(--coral);
+  box-shadow: 0 12px 28px rgba(213, 107, 76, 0.28);
+}
+
+.taller-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.taller-name {
+  font-weight: 700;
+}
+
+.availability {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.availability--high {
+  color: var(--success);
+}
+
+.availability--mid {
+  color: var(--warning);
+}
+
+.availability--low {
+  color: var(--danger);
+}
+
+.actions {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  background: var(--coral);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-message {
+  min-height: 24px;
+  font-weight: 600;
+}
+
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
